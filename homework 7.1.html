@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HOMEWORK 7.1</title>
+	<style>
+		body {
+			color: blue;
+    		padding: 30px;
+    		text-align: center;
+    		font-size: 30px;
+    		background-color: #dac3c7;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		function showDayWeek() {
+			var days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+			var userDate = prompt('Введите дату в формате "год месяц день"');
+			var dayWeek = new Date(userDate);
+			var numberDay = dayWeek.getDay();
+
+			if (numberDay == 0) {
+				var dayNumb = 7;
+				document.write(days[numberDay] +  " - Под номером -  " + dayNumb);
+			} else {
+				document.write(days[numberDay] +  " - Под номером -  " + numberDay);
+			}	
+		}
+		showDayWeek();	
+	</script>
+</body>
+</html>

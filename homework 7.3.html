@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HOMEWORK 7.3</title>
+</head>
+<body>
+	<script>
+		function Person(cure) {
+			this.cure = function () {
+				return console.log();
+			};
+		};
+
+		function Doctor(profesional, walk, eak, drink) {
+			this.profesional = profesional;
+			this.walk = walk;
+			this.eak = eak;
+			this.drink = drink;
+		};
+
+		function Dentist() {
+			
+		};
+
+		function Surgeon() {
+			
+		};
+
+		//Doctor.prototype = new Person();
+		Dentist.prototype = new Doctor("Dentist");
+		Surgeon.prototype = new Doctor("Surgeon");
+		Dentist.prototype.cure = function () {
+			console.log(this.profesional + " Treat teeth")
+		};
+		Surgeon.prototype.cure = function () {
+			console.log(this.profesional + " Performs operations")
+		};
+
+		var person = new Person();
+		var doctor = new Doctor();
+		var dentist = new Dentist();
+		var surgeon = new Surgeon();
+
+		dentist.cure();
+		surgeon.cure();
+
+		console.log(doctor, dentist, surgeon);
+	</script>
+</body>
+</html>
